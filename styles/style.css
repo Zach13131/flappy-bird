@@ -1,0 +1,373 @@
+:root {
+  --background-speed: -2500000%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #040021;
+  color: white;
+  font-family: "Kalam", cursive;
+  text-shadow: -3px 3px 5px #171cff, -5px 5px 8px #d6deff;
+}
+
+.game-block {
+  display: flex;
+}
+
+.main {
+  height: 100%;
+  width: 1800px;
+  position: relative;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-shrink: 0;
+  animation: game 550s infinite linear;
+  z-index: 1;
+}
+
+.main-1 {
+  background-image: url(./../images/1.jpg);
+}
+.main-2 {
+  background-image: url(./../images/2.jpg);
+}
+.main-3 {
+  background-image: url(./../images//3.jpg);
+}
+.main-4 {
+  background-image: url(./../images/4.jpg);
+}
+.main-5 {
+  background-image: url(./../images/5.jpg);
+}
+.main-6 {
+  background-image: url(./../images/6.jpg);
+}
+.main-7 {
+  background-image: url(./../images/7.jpg);
+}
+.main-8 {
+  background-image: url(./../images/8.jpg);
+}
+.main-9 {
+  background-image: url(./../images/9.jpg);
+}
+
+@keyframes game {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -16200px;
+  }
+}
+.game-block::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgb(16, 4, 28);
+  background: linear-gradient(
+    61deg,
+    rgba(16, 4, 28, 0.5) 0%,
+    rgba(16, 4, 28, 0.5) 100%
+  );
+  z-index: 1;
+}
+
+.game {
+  width: 600px;
+  height: 700px;
+  box-shadow: 0px 0px 15px 5px #000e7e, 0px 0px 50px 30px #010030;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%);
+  top: 30px;
+  z-index: 100;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.bird {
+  z-index: 101;
+  position: fixed;
+  /* left: 50%; */
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */
+  left: 265px;
+  top: 325px;
+  width: 70px;
+  height: 50px;
+  border-radius: 100px;
+  /* background-color: rebeccapurple; */
+  /* background-image: url(./../images/pngwing..png); */
+  background-image: url(./../images/pngwing-2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s linear;
+  filter: brightness(0.8);
+}
+
+.pipes-container {
+  position: fixed;
+  width: 1000px;
+  height: 100%;
+  z-index: 101;
+  top: 0;
+}
+
+.pipe-animation {
+  animation: pipes 86400s linear infinite;
+}
+
+@keyframes pipes {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: var(--background-speed);
+  }
+}
+
+.pipe-block {
+  width: 91px;
+  height: 100%;
+  position: absolute;
+}
+
+.pipe {
+  /* background: green; */
+  /* background-image: url(./../images/pipe.png); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  /* width: 80px; */
+  /* position: absolute; */
+}
+
+.top-pipe {
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.bottom-pipe {
+  bottom: 0;
+}
+
+.score-block {
+  position: fixed;
+  z-index: 110;
+  top: 50px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.high-score-block {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* .pipe {
+  width: 80px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    #579c66,
+    #579c66 5px,
+    #6dad7b 15px,
+    #e9ffe8 33px,
+    #9dd591 50px,
+    #6bb765 100px,
+    #142e16 100%
+  );
+}
+
+.pipe::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -6px;
+  height: 8px;
+  width: 91px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1) 98%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+.pipe::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  height: 30px;
+  width: 91px;
+  border-radius: 6px;
+  border-bottom: solid 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    #579c66,
+    #579c66 5px,
+    #6dad7b 18px,
+    #e9ffe8 36px,
+    #9dd591 53px,
+    #6bb765 103px,
+    #142e16 100%
+  );
+} */
+
+.pipe {
+  width: 80px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 3px 3px 15px 4px rgb(0 8 46 / 50%), 0 0 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    to right,
+    #001231,
+    #001941,
+    #0d1f66,
+    #003c8f,
+    #000713 100%
+  );
+}
+
+.pipe::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -6px;
+  height: 8px;
+  width: 91px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05) 98%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+.pipe::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  height: 30px;
+  width: 91px;
+  border-radius: 6px;
+  border-bottom: solid 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    #00112e,
+    #001c4a,
+    #003377,
+    #004ea0,
+    #000000 100%
+  );
+}
+
+.game-over-block {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -54%);
+  z-index: 999;
+  font-size: 40px;
+  text-align: center;
+  background-color: #001c4a;
+  padding: 30px;
+  box-shadow: 0 0 14px 2px #3700a2;
+  border-radius: 30px;
+  height: 370px;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.open-animation {
+  opacity: 0.9;
+  transform: translate(-50%, -50%);
+}
+
+.info-block {
+  margin-bottom: 30px;
+}
+
+.restart-btn {
+  background-image: linear-gradient(
+    to right,
+    #011648 0%,
+    #0b47ba 51%,
+    #021b55 100%
+  );
+  margin: 10px;
+  transition: background-position 0.5s;
+  padding: 10px 44px;
+  text-align: center;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #5800ff;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  animation: move 1s infinite alternate linear;
+  outline: none;
+  border: none;
+}
+
+.restart-btn:hover,
+.restart-btn:focus {
+  /* border: 3px solid #8c00ff; */
+  outline: 3px solid #8c00ffa3;
+}
+
+@keyframes move {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: right center;
+  }
+}
+
+.text {
+  position: fixed;
+  left: 50%;
+  top: 30px;
+  transform: translate(-50%);
+  font-size: 30px;
+  z-index: 999;
+  opacity: 0.3;
+  animation: blink 0.7s infinite linear alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
