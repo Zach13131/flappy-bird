@@ -12,7 +12,6 @@ export const jumpFunc = () => {
   if (!variables.count) {
     pipeMoving();
     checkCrash();
-    const a = document.querySelector(".text");
     text.style.display = "none";
   }
   if (!variables.isGameStarted) {

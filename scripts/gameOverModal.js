@@ -16,6 +16,7 @@ export const openGameOverModal = (score, highestScore) => {
 
 const restartBtnHandler = () => {
   body.addEventListener("keypress", jumpFunc);
+  // body.addEventListener("click", jumpFunc);
   updateVariables("fromTop", 325);
   bird.style.top = `${variables.fromTop}px`;
   resetGame();

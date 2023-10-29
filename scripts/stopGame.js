@@ -21,6 +21,7 @@ export const stopTheGame = (birdFromTop) => {
   setTimeout(() => {
     gameOverModal.classList.add("open-animation");
   }, 0);
+  // body.removeEventListener("click", jumpFunc);
   body.removeEventListener("keypress", jumpFunc);
   restartBtn.focus();
 };
